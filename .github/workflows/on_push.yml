@@ -51,7 +51,7 @@ jobs:
       -
         name: Calculate semver tag
         id: semver-tag
-        uses: gandare/semver-action@v1.0.1
+        uses: gandarez/semver-action@v1.0.1
       - name: Create tag
         uses: actions/github-script@v4
         with:
