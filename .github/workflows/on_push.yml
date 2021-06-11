@@ -126,6 +126,9 @@ jobs:
           name: binaries
           path: build/
       -
+        name: Prepare release assets
+        run: ./bin/prepare_assets.sh
+      -
         name: "Create release"
         uses: softprops/action-gh-release@master
         with:
