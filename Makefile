@@ -29,15 +29,15 @@ build-all: build-darwin build-linux build-windows
 
 build-darwin:
 	CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 $(GOBUILD) -v \
-		-o ./build/darwin/amd64/$(BINARY_NAME)
+		-o ./build/$(BINARY_NAME)-darwin-amd64
 
 build-linux:
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 $(GOBUILD) -v \
-		-o ./build/linux/amd64/$(BINARY_NAME)
+		-o ./build/$(BINARY_NAME)-linux-amd64
 
 build-windows:
 	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 $(GOBUILD) -v \
-		-o ./build/windows/amd64/$(BINARY_NAME).exe
+		-o ./build/$(BINARY_NAME)-windows-amd64.exe
 
 # install linter
 .PHONY: install-linter
